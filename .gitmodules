@@ -1,6 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = /.oh-my-zsh
+	url = git@github.com:notgarrett/ohmyzsh.git
 [submodule ".config/kitty"]
 	path = .config/kitty
-	url = /kitty
+	url = git@github.com:notgarrett/kittyterminalconfig.git
