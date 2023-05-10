@@ -59,6 +59,30 @@ packer.init({
 return packer.startup(function(use)
     use { "wbthomason/packer.nvim" }
     use { "nvim-lua/plenary.nvim" }
+
+    use { 'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
+          requires = { 'hrsh7th/nvim-cmp',
+                       'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+                       'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+                       'L3MON4D3/LuaSnip',
+                       'hrsh7th/cmp-buffer',
+                       'hrsh7th/cmp-path',
+                       'hrsh7th/cmp-cmdline',
+                       "lvimuser/lsp-inlayhints.nvim"
+          },
+          config = function()
+              require('config.cmp')
+          end } -- Snippets plugin
+
+
+    use {
+        "williamboman/nvim-lsp-installer",
+        requires = "neovim/nvim-lspconfig",
+        config = function()
+            require("config.nvim-lsp-installer")
+        end
+    }
+
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -93,13 +117,13 @@ return packer.startup(function(use)
             require("config.startup")
         end
     }
-    use { 'akinsho/bufferline.nvim',
-          tag = "*",
-          requires = 'nvim-tree/nvim-web-devicons',
-          config = function()
-              require("config.bufferline")
-          end
-    }
+
+    use { 'romgrk/barbar.nvim', requires = {
+        'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+        'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    }, config = function()
+        require("config.barbar")
+    end }
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -127,8 +151,27 @@ return packer.startup(function(use)
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         config = function()
-            require("telescope").load_extension "file_browser"
+            require("config.file-browser")
         end
+    }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+        config = function()
+            require("config.gitsigns")
+        end
+    }
+
+    use { "nvim-tree/nvim-tree.lua",
+          requires = { { "nvim-tree/nvim-web-devicons" } },
+          config = function()
+              require("config.nvim-tree")
+          end
+    }
+    use { "moll/vim-bbye" }
+    use { "nvim-treesitter/nvim-treesitter",
+          run = ":TSUpdate",
     }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

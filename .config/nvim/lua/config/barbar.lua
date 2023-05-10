@@ -3,10 +3,9 @@
 --- Created by garrett.
 --- DateTime: 5/9/23 9:14 PM
 ---
-local status_ok, bufferline = pcall(require, "bufferline")
+local status_ok, barbar = pcall(require, "barbar")
 if not status_ok then
     return
 end
 
-vim.opt.termguicolors = true
-bufferline.setup()
+barbar.setup()

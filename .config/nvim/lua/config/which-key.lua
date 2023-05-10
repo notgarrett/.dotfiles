@@ -80,10 +80,17 @@ local opts = {
 
 local mappings = {
 
-    x = "Open file explorer",
+    x = {
+        name = "File Exporer",
+        o = "Open File Explorer",
+        c = "Close File Explorer"
+    },
     j = "Jump with Easymotion",
     f = {
-        name = "File Navigation"
+        name = "File Navigation",
+        f = "Find Files",
+        b = "File Browser",
+        r = 'Recent Files'
     },
     q = "Close Active Tab",
     w = {
