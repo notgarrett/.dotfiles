@@ -8,7 +8,9 @@
 -- Protected calls for requires
 local function prequire(m)
     local ok, err = pcall(require, m)
-    if not ok then return nil, err end
+    if not ok then
+        return nil, err
+    end
     return err
 end
 
@@ -55,34 +57,79 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-    use {"wbthomason/packer.nvim"}
-    use {"nvim-lua/plenary.nvim"}
+    use { "wbthomason/packer.nvim" }
+    use { "nvim-lua/plenary.nvim" }
     use {
         'numToStr/Comment.nvim',
-        config = prequire("config.comment")
+        config = function()
+            require("config.comment")
+        end
     }
 
     use { "catppuccin/nvim",
           as = "catppuccin",
-          config = prequire("config.catpuccin")
+          config = function()
+              require("config.catpuccin")
+          end
 
     }
 
     use {
         "folke/which-key.nvim",
-        config = prequire("config.which-key")
+        config = function()
+            require("config.which-key")
+        end
     }
 
-    use {'lewis6991/impatient.nvim',
-    config = prequire("impatient")}
+    use { 'lewis6991/impatient.nvim',
+          config = function()
+              require("impatient")
+          end }
 
     use {
         "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-        config = prequire("config.startup")
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            require("config.startup")
+        end
+    }
+    use { 'akinsho/bufferline.nvim',
+          tag = "*",
+          requires = 'nvim-tree/nvim-web-devicons',
+          config = function()
+              require("config.bufferline")
+          end
     }
 
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require("config.lualine")
+        end
+    }
+    use { "akinsho/toggleterm.nvim",
+          tag = '*',
+          config = function()
+              require("config.toggleterm")
+          end
+    }
 
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' }
+
+        }
+    }
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            require("telescope").load_extension "file_browser"
+        end
+    }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

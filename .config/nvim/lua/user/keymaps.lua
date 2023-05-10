@@ -22,3 +22,31 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+vim.api.nvim_set_keymap(
+        "n",
+        "<leader>fb",
+        ":Telescope file_browser path=%:p:h select_buffer=true",
+        { noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+        "n",
+        "<leader>ff",
+        ":Telescope find_files",
+        { noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+        "n",
+        "<leader>fr",
+        ":Telescope oldfiles",
+        { noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+        "n",
+        "<leader><leader>",
+        ":Telescope oldfiles",
+        { noremap = true }
+)
