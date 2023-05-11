@@ -85,7 +85,6 @@ local mappings = {
         o = "Open File Explorer",
         c = "Close File Explorer"
     },
-    j = "Jump with Easymotion",
     f = {
         name = "File Navigation",
         f = "Find Files",

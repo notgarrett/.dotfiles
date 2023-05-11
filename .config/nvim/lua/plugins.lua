@@ -176,7 +176,7 @@ return packer.startup(function(use)
   
 
     use {'rust-lang/rust.vim',
-    ft = {"rs", "rust"},
+    ft = {"rs", "rust", "toml"},
     config = function() 
       vim.g.rustfmt_autosave = 1
     end
