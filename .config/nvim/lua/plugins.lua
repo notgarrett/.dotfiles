@@ -5,15 +5,6 @@
 ---
 
 
--- Protected calls for requires
-local function prequire(m)
-    local ok, err = pcall(require, m)
-    if not ok then
-        return nil, err
-    end
-    return err
-end
-
 local fn = vim.fn
 
 -- Automatically install packer
@@ -143,8 +134,8 @@ return packer.startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' }
-
-        }
+        },
+        config = function() require("config.telescope") end
     }
 
     use {
@@ -154,7 +145,6 @@ return packer.startup(function(use)
             require("config.file-browser")
         end
     }
-
     use {
         'lewis6991/gitsigns.nvim',
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
@@ -173,9 +163,28 @@ return packer.startup(function(use)
     use { "nvim-treesitter/nvim-treesitter",
           run = ":TSUpdate",
     }
+
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use {'ggandor/leap.nvim',
+    requires = {{"tpope/vim-repeat"}},
+    config = function() 
+      require('leap').add_default_mappings()
+    end
+
+  }
+
+  
+
+    use {'rust-lang/rust.vim',
+    ft = {"rs", "rust"},
+    config = function() 
+      vim.g.rustfmt_autosave = 1
+    end
+  }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
 end)
+

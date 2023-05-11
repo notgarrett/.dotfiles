@@ -90,7 +90,8 @@ local mappings = {
         name = "File Navigation",
         f = "Find Files",
         b = "File Browser",
-        r = 'Recent Files'
+        r = 'Recent Files',
+        w = 'Find Word'
     },
     q = "Close Active Tab",
     w = {
