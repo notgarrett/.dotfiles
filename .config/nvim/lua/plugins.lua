@@ -173,7 +173,10 @@ return packer.startup(function(use)
 
   }
 
-  
+  use {
+	  "windwp/nvim-autopairs",
+    config = function() require("config.auto_pairs") end
+  }
 
     use {'rust-lang/rust.vim',
     ft = {"rs", "rust", "toml"},
