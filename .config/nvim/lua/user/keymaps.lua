@@ -96,3 +96,8 @@ map('n', "<leader>xc", "<CMD>NvimTreeClose<CR>", opts)
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
 --vim.api.nvim_set_keymap('n', '<Leader>e', ":lua require'config.nvim-tree'.toggle_tree()<CR>", { noremap = true, silent = true })
+--
+
+
+-- Debugging
+
