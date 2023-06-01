@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # export PATH="$PATH:/home/garrettg/ShellScripts"
 
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
