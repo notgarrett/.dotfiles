@@ -4,3 +4,6 @@
 [submodule ".config/kitty"]
 	path = .config/kitty
 	url = /kitty
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = /nvim
