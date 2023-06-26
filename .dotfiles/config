@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = git@github.com:notgarrett/.dotfiles.git
+[submodule ".config/kitty"]
+	active = true
+	url = git@github.com:notgarrett/kittyterminalconfig.git 
+[submodule ".config/nvim"]
+	active = true
+	url = git@github.com:notgarrett/neovimdotfiles.git
+[submodule "~/.oh-my-zsh"]
+	active = true
+	url = git@github.com:notgarrett/ohmyzsh.git
