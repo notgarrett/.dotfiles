@@ -1,0 +1,597 @@
+[38;5;238m───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+       [38;5;238m│ [0mFile: [1mconfig[0m
+[38;5;238m───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;238m   1[0m   [38;5;238m│[0m [38;2;248;248;242m# This file is a modified version based on default i3-config-wizard config[0m
+[38;5;238m   2[0m   [38;5;238m│[0m [38;2;248;248;242m# source is available here:[0m
+[38;5;238m   3[0m   [38;5;238m│[0m [38;2;248;248;242m# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/master/.config/i3/config[0m
+[38;5;238m   4[0m   [38;5;238m│[0m [38;2;248;248;242m# Maintainer: joekamprad [joekamprad //a_t// endeavouros.com][0m
+[38;5;238m   5[0m   [38;5;238m│[0m [38;2;248;248;242m# https://endeavouros.com[0m
+[38;5;238m   6[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m   7[0m   [38;5;238m│[0m [38;2;248;248;242m# iconic font icon search: https://fontawesome.com/v4.7/cheatsheet/[0m
+[38;5;238m   8[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m   9[0m   [38;5;238m│[0m [38;2;248;248;242m# --> to update this run the following command (will backup existing setup file)[0m
+[38;5;238m  10[0m   [38;5;238m│[0m [38;2;248;248;242m# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/config -P ~/.config/i3/[0m
+[38;5;238m  11[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m  12[0m   [38;5;238m│[0m [38;2;248;248;242m# Endeavouros-i3 config file[0m
+[38;5;238m  13[0m   [38;5;238m│[0m [38;2;248;248;242m# Source for complete framework of our i3 config and theming here: https://github.com/endeavouros-team/endeavouros-i3wm-setup[0m
+[38;5;238m  14[0m   [38;5;238m│[0m [38;2;248;248;242m# EndeavourOS wiki holds some Information also: https://discovery.endeavouros.com/window-tiling-managers/i3-wm/[0m
+[38;5;238m  15[0m   [38;5;238m│[0m [38;2;248;248;242m# Please see http://i3wm.org/docs/userguide.html for the official i3 reference![0m
+[38;5;238m  16[0m   [38;5;238m│[0m 
+[38;5;238m  17[0m   [38;5;238m│[0m [38;2;248;248;242m#######################[0m
+[38;5;238m  18[0m   [38;5;238m│[0m [38;2;248;248;242m# config starts here: #[0m
+[38;5;238m  19[0m   [38;5;238m│[0m [38;2;248;248;242m#######################[0m
+[38;5;238m  20[0m   [38;5;238m│[0m 
+[38;5;238m  21[0m   [38;5;238m│[0m [38;2;248;248;242m# Font for window titles. Will also be used by the bar unless a different font[0m
+[38;5;238m  22[0m   [38;5;238m│[0m [38;2;248;248;242m# is used in the bar {} block below.[0m
+[38;5;238m  23[0m   [38;5;238m│[0m [38;2;248;248;242m# This font is widely installed, provides lots of unicode glyphs, right-to-left[0m
+[38;5;238m  24[0m   [38;5;238m│[0m [38;2;248;248;242m# text rendering and scalability on retina/hidpi displays (thanks to pango).[0m
+[38;5;238m  25[0m   [38;5;238m│[0m [38;2;248;248;242mfont pango: Noto Sans Regular 10[0m
+[38;5;238m  26[0m   [38;5;238m│[0m 
+[38;5;238m  27[0m   [38;5;238m│[0m [38;2;248;248;242m# set the mod key to the winkey:[0m
+[38;5;238m  28[0m   [38;5;238m│[0m [38;2;248;248;242mset $mod Mod4[0m
+[38;5;238m  29[0m   [38;5;238m│[0m 
+[38;5;238m  30[0m   [38;5;238m│[0m [38;2;248;248;242m#####################[0m
+[38;5;238m  31[0m   [38;5;238m│[0m [38;2;248;248;242m# workspace layout: #[0m
+[38;5;238m  32[0m   [38;5;238m│[0m [38;2;248;248;242m#####################[0m
+[38;5;238m  33[0m   [38;5;238m│[0m 
+[38;5;238m  34[0m   [38;5;238m│[0m [38;2;248;248;242m# default i3 tiling mode:[0m
+[38;5;238m  35[0m   [38;5;238m│[0m [38;2;248;248;242mworkspace_layout default[0m
+[38;5;238m  36[0m   [38;5;238m│[0m 
+[38;5;238m  37[0m   [38;5;238m│[0m [38;2;248;248;242m# i3 stacking layout:[0m
+[38;5;238m  38[0m   [38;5;238m│[0m [38;2;248;248;242m# Each window will be fullscreen and tabbed top to bottom.[0m
+[38;5;238m  39[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace_layout stacking[0m
+[38;5;238m  40[0m   [38;5;238m│[0m 
+[38;5;238m  41[0m   [38;5;238m│[0m [38;2;248;248;242m# i3 tabbed layout:[0m
+[38;5;238m  42[0m   [38;5;238m│[0m [38;2;248;248;242m# Each new window will open fullscreen as a tab (left to right)[0m
+[38;5;238m  43[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace_layout tabbed[0m
+[38;5;238m  44[0m   [38;5;238m│[0m 
+[38;5;238m  45[0m   [38;5;238m│[0m [38;2;248;248;242m##############################[0m
+[38;5;238m  46[0m   [38;5;238m│[0m [38;2;248;248;242m# extra options for windows: #[0m
+[38;5;238m  47[0m   [38;5;238m│[0m [38;2;248;248;242m##############################[0m
+[38;5;238m  48[0m   [38;5;238m│[0m 
+[38;5;238m  49[0m   [38;5;238m│[0m [38;2;248;248;242m#border indicator on windows:[0m
+[38;5;238m  50[0m   [38;5;238m│[0m [38;2;248;248;242mnew_window pixel 1[0m
+[38;5;238m  51[0m   [38;5;238m│[0m 
+[38;5;238m  52[0m   [38;5;238m│[0m [38;2;248;248;242m# thin borders[0m
+[38;5;238m  53[0m   [38;5;238m│[0m [38;2;248;248;242m# hide_edge_borders both[0m
+[38;5;238m  54[0m   [38;5;238m│[0m 
+[38;5;238m  55[0m   [38;5;238m│[0m [38;2;248;248;242m# Set inner/outer gaps[0m
+[38;5;238m  56[0m   [38;5;238m│[0m [38;2;248;248;242mgaps inner 6[0m
+[38;5;238m  57[0m   [38;5;238m│[0m [38;2;248;248;242mgaps outer 3[0m
+[38;5;238m  58[0m   [38;5;238m│[0m 
+[38;5;238m  59[0m   [38;5;238m│[0m [38;2;248;248;242m# show window title bars (not officially supported with i3gaps)[0m
+[38;5;238m  60[0m   [38;5;238m│[0m [38;2;248;248;242m#default_border normal[0m
+[38;5;238m  61[0m   [38;5;238m│[0m 
+[38;5;238m  62[0m   [38;5;238m│[0m [38;2;248;248;242m# window title alignment[0m
+[38;5;238m  63[0m   [38;5;238m│[0m [38;2;248;248;242m#title_align center[0m
+[38;5;238m  64[0m   [38;5;238m│[0m 
+[38;5;238m  65[0m   [38;5;238m│[0m [38;2;248;248;242m# Use Mouse+$mod to drag floating windows to their wanted position[0m
+[38;5;238m  66[0m   [38;5;238m│[0m [38;2;248;248;242mfloating_modifier $mod[0m
+[38;5;238m  67[0m   [38;5;238m│[0m 
+[38;5;238m  68[0m   [38;5;238m│[0m [38;2;248;248;242m# switch/iterate between workspaces[0m
+[38;5;238m  69[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Tab workspace next[0m
+[38;5;238m  70[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+Tab workspace prev[0m
+[38;5;238m  71[0m   [38;5;238m│[0m 
+[38;5;238m  72[0m   [38;5;238m│[0m [38;2;248;248;242m# switch to workspace[0m
+[38;5;238m  73[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+1    workspace  $ws1[0m
+[38;5;238m  74[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+2    workspace  $ws2[0m
+[38;5;238m  75[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+3    workspace  $ws3[0m
+[38;5;238m  76[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+4    workspace  $ws4[0m
+[38;5;238m  77[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+5    workspace  $ws5[0m
+[38;5;238m  78[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+6    workspace  $ws6[0m
+[38;5;238m  79[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+7    workspace  $ws7[0m
+[38;5;238m  80[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+8    workspace  $ws8[0m
+[38;5;238m  81[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+9    workspace  $ws9[0m
+[38;5;238m  82[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+0    workspace  $ws10[0m
+[38;5;238m  83[0m   [38;5;238m│[0m 
+[38;5;238m  84[0m   [38;5;238m│[0m [38;2;248;248;242m# switch to workspace with numpad keys[0m
+[38;5;238m  85[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+87 workspace 1[0m
+[38;5;238m  86[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+88 workspace 2[0m
+[38;5;238m  87[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+89 workspace 3[0m
+[38;5;238m  88[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+83 workspace 4[0m
+[38;5;238m  89[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+84 workspace 5[0m
+[38;5;238m  90[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+85 workspace 6[0m
+[38;5;238m  91[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+79 workspace 7[0m
+[38;5;238m  92[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+80 workspace 8[0m
+[38;5;238m  93[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+81 workspace 9[0m
+[38;5;238m  94[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+90 workspace 10[0m
+[38;5;238m  95[0m   [38;5;238m│[0m 
+[38;5;238m  96[0m   [38;5;238m│[0m [38;2;248;248;242m# switch to workspace with numlock numpad keys[0m
+[38;5;238m  97[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+87 workspace $ws1[0m
+[38;5;238m  98[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+88 workspace $ws2[0m
+[38;5;238m  99[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+89 workspace $ws3[0m
+[38;5;238m 100[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+83 workspace $ws4[0m
+[38;5;238m 101[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+84 workspace $ws5[0m
+[38;5;238m 102[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+85 workspace $ws6[0m
+[38;5;238m 103[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+79 workspace $ws7[0m
+[38;5;238m 104[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+80 workspace $ws8[0m
+[38;5;238m 105[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+81 workspace $ws9[0m
+[38;5;238m 106[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Mod2+90 workspace $ws10[0m
+[38;5;238m 107[0m   [38;5;238m│[0m 
+[38;5;238m 108[0m   [38;5;238m│[0m [38;2;248;248;242m# move focused container to workspace[0m
+[38;5;238m 109[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+1    move container to workspace  $ws1[0m
+[38;5;238m 110[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+2    move container to workspace  $ws2[0m
+[38;5;238m 111[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+3    move container to workspace  $ws3[0m
+[38;5;238m 112[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+4    move container to workspace  $ws4[0m
+[38;5;238m 113[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+5    move container to workspace  $ws5[0m
+[38;5;238m 114[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+6    move container to workspace  $ws6[0m
+[38;5;238m 115[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+7    move container to workspace  $ws7[0m
+[38;5;238m 116[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+8    move container to workspace  $ws8[0m
+[38;5;238m 117[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+9    move container to workspace  $ws9[0m
+[38;5;238m 118[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+0    move container to workspace  $ws10[0m
+[38;5;238m 119[0m   [38;5;238m│[0m 
+[38;5;238m 120[0m   [38;5;238m│[0m [38;2;248;248;242m# move focused container to workspace with numpad keys[0m
+[38;5;238m 121[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+87     move container to workspace  $ws1[0m
+[38;5;238m 122[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+88     move container to workspace  $ws2[0m
+[38;5;238m 123[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+89     move container to workspace  $ws3[0m
+[38;5;238m 124[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+83     move container to workspace  $ws4[0m
+[38;5;238m 125[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+84     move container to workspace  $ws5[0m
+[38;5;238m 126[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+85     move container to workspace  $ws6[0m
+[38;5;238m 127[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+79     move container to workspace  $ws7[0m
+[38;5;238m 128[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+80     move container to workspace  $ws8[0m
+[38;5;238m 129[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+81     move container to workspace  $ws9[0m
+[38;5;238m 130[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+Mod2+90     move container to workspace  $ws10[0m
+[38;5;238m 131[0m   [38;5;238m│[0m 
+[38;5;238m 132[0m   [38;5;238m│[0m [38;2;248;248;242m# move focused container to workspace with numpad keys[0m
+[38;5;238m 133[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+87   move container to workspace  $ws1[0m
+[38;5;238m 134[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+88   move container to workspace  $ws2[0m
+[38;5;238m 135[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+89   move container to workspace  $ws3[0m
+[38;5;238m 136[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+83   move container to workspace  $ws4[0m
+[38;5;238m 137[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+84   move container to workspace  $ws5[0m
+[38;5;238m 138[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+85   move container to workspace  $ws6[0m
+[38;5;238m 139[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+79   move container to workspace  $ws7[0m
+[38;5;238m 140[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+80   move container to workspace  $ws8[0m
+[38;5;238m 141[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+81   move container to workspace  $ws9[0m
+[38;5;238m 142[0m   [38;5;238m│[0m [38;2;248;248;242mbindcode $mod+Shift+90   move container to workspace  $ws10[0m
+[38;5;238m 143[0m   [38;5;238m│[0m 
+[38;5;238m 144[0m   [38;5;238m│[0m [38;2;248;248;242m# resize window (you can also use the mouse for that):[0m
+[38;5;238m 145[0m   [38;5;238m│[0m [38;2;248;248;242m#mode "resize" {[0m
+[38;5;238m 146[0m   [38;5;238m│[0m [38;2;248;248;242m# These bindings trigger as soon as you enter the resize mode[0m
+[38;5;238m 147[0m   [38;5;238m│[0m [38;2;248;248;242m# Pressing left will shrink the window's width.[0m
+[38;5;238m 148[0m   [38;5;238m│[0m [38;2;248;248;242m# Pressing right will grow the window's width.[0m
+[38;5;238m 149[0m   [38;5;238m│[0m [38;2;248;248;242m# Pressing up will shrink the window's height.[0m
+[38;5;238m 150[0m   [38;5;238m│[0m [38;2;248;248;242m# Pressing down will grow the window's height.[0m
+[38;5;238m 151[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym j resize shrink width 10 px or 10 ppt[0m
+[38;5;238m 152[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym k resize grow height 10 px or 10 ppt[0m
+[38;5;238m 153[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym l resize shrink height 10 px or 10 ppt[0m
+[38;5;238m 154[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym ntilde resize grow width 10 px or 10 ppt[0m
+[38;5;238m 155[0m   [38;5;238m│[0m 
+[38;5;238m 156[0m   [38;5;238m│[0m [38;2;248;248;242m# same bindings, but for the arrow keys[0m
+[38;5;238m 157[0m   [38;5;238m│[0m [38;2;248;248;242m#   bindsym Left resize shrink width 10 px or 10 ppt[0m
+[38;5;238m 158[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym Down resize grow height 10 px or 10 ppt[0m
+[38;5;238m 159[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym Up resize shrink height 10 px or 10 ppt[0m
+[38;5;238m 160[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym Right resize grow width 10 px or 10 ppt[0m
+[38;5;238m 161[0m   [38;5;238m│[0m 
+[38;5;238m 162[0m   [38;5;238m│[0m [38;2;248;248;242m# back to normal: Enter or Escape[0m
+[38;5;238m 163[0m   [38;5;238m│[0m [38;2;248;248;242m#   bindsym Return mode "default"[0m
+[38;5;238m 164[0m   [38;5;238m│[0m [38;2;248;248;242m#        bindsym Escape mode "default"[0m
+[38;5;238m 165[0m   [38;5;238m│[0m [38;2;248;248;242m#}[0m
+[38;5;238m 166[0m   [38;5;238m│[0m 
+[38;5;238m 167[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym $mod+r mode "resize"[0m
+[38;5;238m 168[0m   [38;5;238m│[0m 
+[38;5;238m 169[0m   [38;5;238m│[0m [38;2;248;248;242m######################################[0m
+[38;5;238m 170[0m   [38;5;238m│[0m [38;2;248;248;242m# keybindings for different actions: #[0m
+[38;5;238m 171[0m   [38;5;238m│[0m [38;2;248;248;242m######################################[0m
+[38;5;238m 172[0m   [38;5;238m│[0m 
+[38;5;238m 173[0m   [38;5;238m│[0m [38;2;248;248;242m# start a terminal[0m
+[38;5;238m 174[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Return exec kitty[0m
+[38;5;238m 175[0m   [38;5;238m│[0m 
+[38;5;238m 176[0m   [38;5;238m│[0m [38;2;248;248;242m# kill focused window[0m
+[38;5;238m 177[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+q kill[0m
+[38;5;238m 178[0m   [38;5;238m│[0m 
+[38;5;238m 179[0m   [38;5;238m│[0m [38;2;248;248;242m# exit-menu[0m
+[38;5;238m 180[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu[0m
+[38;5;238m 181[0m   [38;5;238m│[0m 
+[38;5;238m 182[0m   [38;5;238m│[0m [38;2;248;248;242m# Lock the system[0m
+[38;5;238m 183[0m   [38;5;238m│[0m [38;2;248;248;242m# lock with a picture:[0m
+[38;5;238m 184[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t[0m
+[38;5;238m 185[0m   [38;5;238m│[0m [38;2;248;248;242m# lock by blurring the screen:[0m
+[38;5;238m 186[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+l exec ~/.config/i3/scripts/blur-lock[0m
+[38;5;238m 187[0m   [38;5;238m│[0m 
+[38;5;238m 188[0m   [38;5;238m│[0m [38;2;248;248;242m# reload the configuration file[0m
+[38;5;238m 189[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+c reload[0m
+[38;5;238m 190[0m   [38;5;238m│[0m 
+[38;5;238m 191[0m   [38;5;238m│[0m [38;2;248;248;242m# restart i3 inplace (preserves your layout/session, can be used to update i3)[0m
+[38;5;238m 192[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+r restart[0m
+[38;5;238m 193[0m   [38;5;238m│[0m 
+[38;5;238m 194[0m   [38;5;238m│[0m [38;2;248;248;242m# keybinding in fancy rofi (automated):[0m
+[38;5;238m 195[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym F1 exec ~/.config/i3/scripts/keyhint-2[0m
+[38;5;238m 196[0m   [38;5;238m│[0m [38;2;248;248;242m# alternative[0m
+[38;5;238m 197[0m   [38;5;238m│[0m [38;2;248;248;242m# keybinding list in editor:[0m
+[38;5;238m 198[0m   [38;5;238m│[0m [38;2;248;248;242m# bindsym $mod+F1 exec xed ~/.config/i3/keybindings[0m
+[38;5;238m 199[0m   [38;5;238m│[0m 
+[38;5;238m 200[0m   [38;5;238m│[0m [38;2;248;248;242m# Backlight control[0m
+[38;5;238m 201[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym XF86MonBrightnessUp exec xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"[0m
+[38;5;238m 202[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym XF86MonBrightnessDown exec xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"[0m
+[38;5;238m 203[0m   [38;5;238m│[0m [38;2;248;248;242m# Backlight setting using dunst osc[0m
+[38;5;238m 204[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up[0m
+[38;5;238m 205[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down[0m
+[38;5;238m 206[0m   [38;5;238m│[0m 
+[38;5;238m 207[0m   [38;5;238m│[0m [38;2;248;248;242m# change focus[0m
+[38;5;238m 208[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+j focus left[0m
+[38;5;238m 209[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+b focus down[0m
+[38;5;238m 210[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+o focus up[0m
+[38;5;238m 211[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+k focus right[0m
+[38;5;238m 212[0m   [38;5;238m│[0m 
+[38;5;238m 213[0m   [38;5;238m│[0m [38;2;248;248;242m# alternatively, you can use the cursor keys:[0m
+[38;5;238m 214[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Left focus left[0m
+[38;5;238m 215[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Down focus down[0m
+[38;5;238m 216[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Up focus up[0m
+[38;5;238m 217[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Right focus right[0m
+[38;5;238m 218[0m   [38;5;238m│[0m 
+[38;5;238m 219[0m   [38;5;238m│[0m [38;2;248;248;242m# move focused window[0m
+[38;5;238m 220[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+j move left[0m
+[38;5;238m 221[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+b  move down[0m
+[38;5;238m 222[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+o move up[0m
+[38;5;238m 223[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+k move right[0m
+[38;5;238m 224[0m   [38;5;238m│[0m 
+[38;5;238m 225[0m   [38;5;238m│[0m [38;2;248;248;242m# alternatively, you can use the cursor keys:[0m
+[38;5;238m 226[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+Left move left[0m
+[38;5;238m 227[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+Down move down[0m
+[38;5;238m 228[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+Up move up[0m
+[38;5;238m 229[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+Right move right[0m
+[38;5;238m 230[0m   [38;5;238m│[0m 
+[38;5;238m 231[0m   [38;5;238m│[0m [38;2;248;248;242m# split in horizontal orientation[0m
+[38;5;238m 232[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+h split h[0m
+[38;5;238m 233[0m   [38;5;238m│[0m 
+[38;5;238m 234[0m   [38;5;238m│[0m [38;2;248;248;242m# split in vertical orientation[0m
+[38;5;238m 235[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+v split v[0m
+[38;5;238m 236[0m   [38;5;238m│[0m 
+[38;5;238m 237[0m   [38;5;238m│[0m [38;2;248;248;242m# enter fullscreen mode for the focused container[0m
+[38;5;238m 238[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+f fullscreen toggle[0m
+[38;5;238m 239[0m   [38;5;238m│[0m 
+[38;5;238m 240[0m   [38;5;238m│[0m [38;2;248;248;242m# change container layout (stacked, tabbed, toggle split)[0m
+[38;5;238m 241[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+s layout stacking[0m
+[38;5;238m 242[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+g layout tabbed[0m
+[38;5;238m 243[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+e layout toggle split[0m
+[38;5;238m 244[0m   [38;5;238m│[0m 
+[38;5;238m 245[0m   [38;5;238m│[0m [38;2;248;248;242m# toggle tiling / floating[0m
+[38;5;238m 246[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+space floating toggle[0m
+[38;5;238m 247[0m   [38;5;238m│[0m 
+[38;5;238m 248[0m   [38;5;238m│[0m [38;2;248;248;242m# change focus between tiling / floating windows[0m
+[38;5;238m 249[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+space focus mode_toggle[0m
+[38;5;238m 250[0m   [38;5;238m│[0m 
+[38;5;238m 251[0m   [38;5;238m│[0m [38;2;248;248;242m# focus the parent container[0m
+[38;5;238m 252[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+a focus parent[0m
+[38;5;238m 253[0m   [38;5;238m│[0m 
+[38;5;238m 254[0m   [38;5;238m│[0m [38;2;248;248;242m# open new empty workspace[0m
+[38;5;238m 255[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace[0m
+[38;5;238m 256[0m   [38;5;238m│[0m 
+[38;5;238m 257[0m   [38;5;238m│[0m [38;2;248;248;242m# Multimedia Keys[0m
+[38;5;238m 258[0m   [38;5;238m│[0m 
+[38;5;238m 259[0m   [38;5;238m│[0m [38;2;248;248;242m# volume[0m
+[38;5;238m 260[0m   [38;5;238m│[0m [38;2;248;248;242m# use meta keys without showing osc[0m
+[38;5;238m 261[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks[0m
+[38;5;238m 262[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks[0m
+[38;5;238m 263[0m   [38;5;238m│[0m [38;2;248;248;242m# use meta keys showing osc using dunst[0m
+[38;5;238m 264[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_up[0m
+[38;5;238m 265[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_down[0m
+[38;5;238m 266[0m   [38;5;238m│[0m 
+[38;5;238m 267[0m   [38;5;238m│[0m [38;2;248;248;242m# gradular volume control[0m
+[38;5;238m 268[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks[0m
+[38;5;238m 269[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks[0m
+[38;5;238m 270[0m   [38;5;238m│[0m 
+[38;5;238m 271[0m   [38;5;238m│[0m [38;2;248;248;242m# mute[0m
+[38;5;238m 272[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks[0m
+[38;5;238m 273[0m   [38;5;238m│[0m [38;2;248;248;242m# use meta keys showing osc using dunst[0m
+[38;5;238m 274[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_mute[0m
+[38;5;238m 275[0m   [38;5;238m│[0m 
+[38;5;238m 276[0m   [38;5;238m│[0m [38;2;248;248;242m# mic mute toggle[0m
+[38;5;238m 277[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioMicMute exec amixer sset Capture toggle[0m
+[38;5;238m 278[0m   [38;5;238m│[0m 
+[38;5;238m 279[0m   [38;5;238m│[0m [38;2;248;248;242m# audio control[0m
+[38;5;238m 280[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioPlay exec playerctl play-pause[0m
+[38;5;238m 281[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioPause exec playerctl play-pause[0m
+[38;5;238m 282[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioNext exec playerctl next[0m
+[38;5;238m 283[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym XF86AudioPrev exec playerctl previous[0m
+[38;5;238m 284[0m   [38;5;238m│[0m 
+[38;5;238m 285[0m   [38;5;238m│[0m [38;2;248;248;242m# Redirect sound to headphones[0m
+[38;5;238m 286[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+p exec /usr/local/bin/switch-audio-port[0m
+[38;5;238m 287[0m   [38;5;238m│[0m 
+[38;5;238m 288[0m   [38;5;238m│[0m [38;2;248;248;242m## App shortcuts[0m
+[38;5;238m 289[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+w exec firefox[0m
+[38;5;238m 290[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+n exec /usr/bin/thunar[0m
+[38;5;238m 291[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"[0m
+[38;5;238m 292[0m   [38;5;238m│[0m 
+[38;5;238m 293[0m   [38;5;238m│[0m [38;2;248;248;242m# Power Profiles menu switcher (rofi)[0m
+[38;5;238m 294[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles[0m
+[38;5;238m 295[0m   [38;5;238m│[0m 
+[38;5;238m 296[0m   [38;5;238m│[0m [38;2;248;248;242m##########################################[0m
+[38;5;238m 297[0m   [38;5;238m│[0m [38;2;248;248;242m# configuration for workspace behaviour: #[0m
+[38;5;238m 298[0m   [38;5;238m│[0m [38;2;248;248;242m##########################################[0m
+[38;5;238m 299[0m   [38;5;238m│[0m 
+[38;5;238m 300[0m   [38;5;238m│[0m [38;2;248;248;242m# Define names for default workspaces for which we configure key bindings later on.[0m
+[38;5;238m 301[0m   [38;5;238m│[0m [38;2;248;248;242m# We use variables to avoid repeating the names in multiple places.[0m
+[38;5;238m 302[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws1 "1:"[0m
+[38;5;238m 303[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws2 "2:"[0m
+[38;5;238m 304[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws3 "3:"[0m
+[38;5;238m 305[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws4 "4:"[0m
+[38;5;238m 306[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws5 "5:"[0m
+[38;5;238m 307[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws6 "6"[0m
+[38;5;238m 308[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws7 "7"[0m
+[38;5;238m 309[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws8 "8"[0m
+[38;5;238m 310[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws9 "9"[0m
+[38;5;238m 311[0m   [38;5;238m│[0m [38;2;248;248;242mset $ws10 "10"[0m
+[38;5;238m 312[0m   [38;5;238m│[0m 
+[38;5;238m 313[0m   [38;5;238m│[0m [38;2;248;248;242m# use workspaces on different displays:[0m
+[38;5;238m 314[0m   [38;5;238m│[0m [38;2;248;248;242m# where you have to replace VGA-0/HDMI-0 with the names for your displays[0m
+[38;5;238m 315[0m   [38;5;238m│[0m [38;2;248;248;242m# you can get from xrandr command[0m
+[38;5;238m 316[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace $ws1 output VGA-0[0m
+[38;5;238m 317[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace $ws2 output VGA-0[0m
+[38;5;238m 318[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace $ws3 output HDMI-0[0m
+[38;5;238m 319[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace $ws4 output HDMI-0[0m
+[38;5;238m 320[0m   [38;5;238m│[0m [38;2;248;248;242m#workspace $ws5 output HDMI-0[0m
+[38;5;238m 321[0m   [38;5;238m│[0m 
+[38;5;238m 322[0m   [38;5;238m│[0m [38;2;248;248;242m# bind program to workspace and focus to them on startup:[0m
+[38;5;238m 323[0m   [38;5;238m│[0m [38;2;248;248;242massign [class="kitty"] $ws1[0m
+[38;5;238m 324[0m   [38;5;238m│[0m [38;2;248;248;242massign [class="(?i)Firefox"] $ws2[0m
+[38;5;238m 325[0m   [38;5;238m│[0m [38;2;248;248;242massign [class="Thunar"] $ws3[0m
+[38;5;238m 326[0m   [38;5;238m│[0m [38;2;248;248;242massign [class="thunderbird"] $ws4[0m
+[38;5;238m 327[0m   [38;5;238m│[0m [38;2;248;248;242massign [class="TelegramDesktop"] $ws5[0m
+[38;5;238m 328[0m   [38;5;238m│[0m 
+[38;5;238m 329[0m   [38;5;238m│[0m [38;2;248;248;242m# automatic set focus new window if it opens on another workspace than the current:[0m
+[38;5;238m 330[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class=kitty] focus[0m
+[38;5;238m 331[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class=(?i)Firefox] focus[0m
+[38;5;238m 332[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class=Thunar] focus[0m
+[38;5;238m 333[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class=Thunderbird] focus[0m
+[38;5;238m 334[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class=TelegramDesktop] focus[0m
+[38;5;238m 335[0m   [38;5;238m│[0m 
+[38;5;238m 336[0m   [38;5;238m│[0m [38;2;248;248;242m##############[0m
+[38;5;238m 337[0m   [38;5;238m│[0m [38;2;248;248;242m# compositor #[0m
+[38;5;238m 338[0m   [38;5;238m│[0m [38;2;248;248;242m##############[0m
+[38;5;238m 339[0m   [38;5;238m│[0m 
+[38;5;238m 340[0m   [38;5;238m│[0m [38;2;248;248;242m# transparency[0m
+[38;5;238m 341[0m   [38;5;238m│[0m [38;2;248;248;242m# uncomment one of them to be used[0m
+[38;5;238m 342[0m   [38;5;238m│[0m [38;2;248;248;242m# options could need changes, related to used GPU and drivers.[0m
+[38;5;238m 343[0m   [38;5;238m│[0m [38;2;248;248;242m# to find the right setting consult the archwiki or ask at the forum.[0m
+[38;5;238m 344[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 345[0m   [38;5;238m│[0m [38;2;248;248;242m# xcompmgr: https://wiki.archlinux.org/title/Xcompmgr[0m
+[38;5;238m 346[0m   [38;5;238m│[0m [38;2;248;248;242m# manpage: https://man.archlinux.org/man/xcompmgr.1.en[0m
+[38;5;238m 347[0m   [38;5;238m│[0m [38;2;248;248;242m# install xcompmgr package to use it (yay -S xcompmgr)[0m
+[38;5;238m 348[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xcompmgr -C -n &[0m
+[38;5;238m 349[0m   [38;5;238m│[0m [38;2;248;248;242m# or an more specialized config like this:[0m
+[38;5;238m 350[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &[0m
+[38;5;238m 351[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 352[0m   [38;5;238m│[0m [38;2;248;248;242m# or:[0m
+[38;5;238m 353[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 354[0m   [38;5;238m│[0m [38;2;248;248;242m# picom: https://wiki.archlinux.org/title/Picom[0m
+[38;5;238m 355[0m   [38;5;238m│[0m [38;2;248;248;242m# manpage: https://man.archlinux.org/man/picom.1.en[0m
+[38;5;238m 356[0m   [38;5;238m│[0m [38;2;248;248;242m# The default configuration is available in /etc/xdg/picom.conf [0m
+[38;5;238m 357[0m   [38;5;238m│[0m [38;2;248;248;242m# For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf[0m
+[38;5;238m 358[0m   [38;5;238m│[0m [38;2;248;248;242m# install picom package (yay -S picom)[0m
+[38;5;238m 359[0m   [38;5;238m│[0m [38;2;248;248;242m# start using default config [0m
+[38;5;238m 360[0m   [38;5;238m│[0m [38;2;248;248;242m#exec_always --no-startup-id picom -b[0m
+[38;5;238m 361[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 362[0m   [38;5;238m│[0m [38;2;248;248;242m# for custom config:[0m
+[38;5;238m 363[0m   [38;5;238m│[0m [38;2;248;248;242m#exec_always --no-startup-id picom --config  ~/.config/picom.conf[0m
+[38;5;238m 364[0m   [38;5;238m│[0m 
+[38;5;238m 365[0m   [38;5;238m│[0m [38;2;248;248;242m#############################################[0m
+[38;5;238m 366[0m   [38;5;238m│[0m [38;2;248;248;242m# autostart applications/services on login: #[0m
+[38;5;238m 367[0m   [38;5;238m│[0m [38;2;248;248;242m#############################################[0m
+[38;5;238m 368[0m   [38;5;238m│[0m 
+[38;5;238m 369[0m   [38;5;238m│[0m [38;2;248;248;242m#get auth work with polkit-gnome[0m
+[38;5;238m 370[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1[0m
+[38;5;238m 371[0m   [38;5;238m│[0m 
+[38;5;238m 372[0m   [38;5;238m│[0m [38;2;248;248;242m# dex execute .desktop files + apps using /etc/xdg/autostart.[0m
+[38;5;238m 373[0m   [38;5;238m│[0m [38;2;248;248;242m# when second to i3 a DE is installed or mixed usage of i3 + xfce4 or GNOME[0m
+[38;5;238m 374[0m   [38;5;238m│[0m [38;2;248;248;242m# in this cases better disable dex and use manual starting apps using xdg/autostart[0m
+[38;5;238m 375[0m   [38;5;238m│[0m [38;2;248;248;242m# if enabled you should comment welcome app.[0m
+[38;5;238m 376[0m   [38;5;238m│[0m [38;2;248;248;242m# https://github.com/jceb/dex[0m
+[38;5;238m 377[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/[0m
+[38;5;238m 378[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id dex --autostart --environment i3[0m
+[38;5;238m 379[0m   [38;5;238m│[0m 
+[38;5;238m 380[0m   [38;5;238m│[0m [38;2;248;248;242m# start welcome app[0m
+[38;5;238m 381[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 [0m
+[38;5;238m 382[0m   [38;5;238m│[0m 
+[38;5;238m 383[0m   [38;5;238m│[0m [38;2;248;248;242m# num lock activated[0m
+[38;5;238m 384[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id numlockx on[0m
+[38;5;238m 385[0m   [38;5;238m│[0m 
+[38;5;238m 386[0m   [38;5;238m│[0m [38;2;248;248;242m# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)[0m
+[38;5;238m 387[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'[0m
+[38;5;238m 388[0m   [38;5;238m│[0m 
+[38;5;238m 389[0m   [38;5;238m│[0m [38;2;248;248;242m# start conky:[0m
+[38;5;238m 390[0m   [38;5;238m│[0m [38;2;248;248;242m#exec_always --no-startup-id conky[0m
+[38;5;238m 391[0m   [38;5;238m│[0m 
+[38;5;238m 392[0m   [38;5;238m│[0m [38;2;248;248;242m# start a script to setup displays[0m
+[38;5;238m 393[0m   [38;5;238m│[0m [38;2;248;248;242m# uncomment the next line, use arandr to setup displays and save the file as monitor:[0m
+[38;5;238m 394[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id ~/.screenlayout/monitor.sh[0m
+[38;5;238m 395[0m   [38;5;238m│[0m 
+[38;5;238m 396[0m   [38;5;238m│[0m [38;2;248;248;242m# set wallpaper[0m
+[38;5;238m 397[0m   [38;5;238m│[0m [38;2;248;248;242m# exec --no-startup-id sleep 2 && nitrogen --restore[0m
+[38;5;238m 398[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id sleep 1 && feh --bg-fill $HOME/Pictures/background.png[0m
+[38;5;238m 399[0m   [38;5;238m│[0m 
+[38;5;238m 400[0m   [38;5;238m│[0m [38;2;248;248;242m# set powersavings for display:[0m
+[38;5;238m 401[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id xset s 480 dpms 600 600 600[0m
+[38;5;238m 402[0m   [38;5;238m│[0m 
+[38;5;238m 403[0m   [38;5;238m│[0m [38;2;248;248;242m# disable power saving (for example if using xscreensaver)[0m
+[38;5;238m 404[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xset -dpms[0m
+[38;5;238m 405[0m   [38;5;238m│[0m 
+[38;5;238m 406[0m   [38;5;238m│[0m [38;2;248;248;242m# use xautolock to use autosuspend rules for mobile devices[0m
+[38;5;238m 407[0m   [38;5;238m│[0m [38;2;248;248;242m# https://wiki.archlinux.org/title/Session_lock#xautolock[0m
+[38;5;238m 408[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"[0m
+[38;5;238m 409[0m   [38;5;238m│[0m 
+[38;5;238m 410[0m   [38;5;238m│[0m 
+[38;5;238m 411[0m   [38;5;238m│[0m [38;2;248;248;242m# xscreensaver[0m
+[38;5;238m 412[0m   [38;5;238m│[0m [38;2;248;248;242m# https://www.jwz.org/xscreensaver[0m
+[38;5;238m 413[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xscreensaver --no-splash[0m
+[38;5;238m 414[0m   [38;5;238m│[0m 
+[38;5;238m 415[0m   [38;5;238m│[0m [38;2;248;248;242m# Desktop notifications[0m
+[38;5;238m 416[0m   [38;5;238m│[0m [38;2;248;248;242m# dunst config used ~/.config/dunst/dunstrc[0m
+[38;5;238m 417[0m   [38;5;238m│[0m [38;2;248;248;242m# set alternative config if needed:[0m
+[38;5;238m 418[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id /usr/bin/dunst --config ~/.config/dunst/dunstrc[0m
+[38;5;238m 419[0m   [38;5;238m│[0m [38;2;248;248;242m# may yneed to run dbus-launch explicitly: [0m
+[38;5;238m 420[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id dbus-launch /usr/bin/dunst[0m
+[38;5;238m 421[0m   [38;5;238m│[0m [38;2;248;248;242mexec --no-startup-id /usr/bin/dunst[0m
+[38;5;238m 422[0m   [38;5;238m│[0m [38;2;248;248;242m# alternative if you installed aside with XFCE4:[0m
+[38;5;238m 423[0m   [38;5;238m│[0m [38;2;248;248;242m# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &[0m
+[38;5;238m 424[0m   [38;5;238m│[0m 
+[38;5;238m 425[0m   [38;5;238m│[0m [38;2;248;248;242m# autotiling script[0m
+[38;5;238m 426[0m   [38;5;238m│[0m [38;2;248;248;242m# https://github.com/nwg-piotr/autotiling[0m
+[38;5;238m 427[0m   [38;5;238m│[0m [38;2;248;248;242m# `yay -S autotiling ;) (it is in AUR)[0m
+[38;5;238m 428[0m   [38;5;238m│[0m [38;2;248;248;242m#exec_always --no-startup-id autotiling[0m
+[38;5;238m 429[0m   [38;5;238m│[0m 
+[38;5;238m 430[0m   [38;5;238m│[0m [38;2;248;248;242m# Autostart apps as you like[0m
+[38;5;238m 431[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id sleep 2 && xfce4-terminal[0m
+[38;5;238m 432[0m   [38;5;238m│[0m [38;2;248;248;242m# exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md[0m
+[38;5;238m 433[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id sleep 3 && thunar[0m
+[38;5;238m 434[0m   [38;5;238m│[0m 
+[38;5;238m 435[0m   [38;5;238m│[0m [38;2;248;248;242m###############[0m
+[38;5;238m 436[0m   [38;5;238m│[0m [38;2;248;248;242m# system tray #[0m
+[38;5;238m 437[0m   [38;5;238m│[0m [38;2;248;248;242m###############[0m
+[38;5;238m 438[0m   [38;5;238m│[0m [38;2;248;248;242m# if you do not use dex: exec --no-startup-id dex --autostart --environment i3[0m
+[38;5;238m 439[0m   [38;5;238m│[0m [38;2;248;248;242m# you need to have tray apps started manually one by one:[0m
+[38;5;238m 440[0m   [38;5;238m│[0m 
+[38;5;238m 441[0m   [38;5;238m│[0m [38;2;248;248;242m# start blueberry app for managing bluetooth devices from tray:[0m
+[38;5;238m 442[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id blueberry-tray[0m
+[38;5;238m 443[0m   [38;5;238m│[0m 
+[38;5;238m 444[0m   [38;5;238m│[0m [38;2;248;248;242m# networkmanager-applet[0m
+[38;5;238m 445[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id nm-applet[0m
+[38;5;238m 446[0m   [38;5;238m│[0m 
+[38;5;238m 447[0m   [38;5;238m│[0m [38;2;248;248;242m# clipman-applet[0m
+[38;5;238m 448[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id xfce4-clipman[0m
+[38;5;238m 449[0m   [38;5;238m│[0m 
+[38;5;238m 450[0m   [38;5;238m│[0m [38;2;248;248;242m##################[0m
+[38;5;238m 451[0m   [38;5;238m│[0m [38;2;248;248;242m# floating rules #[0m
+[38;5;238m 452[0m   [38;5;238m│[0m [38;2;248;248;242m##################[0m
+[38;5;238m 453[0m   [38;5;238m│[0m 
+[38;5;238m 454[0m   [38;5;238m│[0m [38;2;248;248;242m# set floating (nontiling) for apps needing it[0m
+[38;5;238m 455[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Yad" instance="yad"] floating enable[0m
+[38;5;238m 456[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Galculator" instance="galculator"] floating enable[0m
+[38;5;238m 457[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Blueberry.py" instance="blueberry.py"] floating enable[0m
+[38;5;238m 458[0m   [38;5;238m│[0m 
+[38;5;238m 459[0m   [38;5;238m│[0m [38;2;248;248;242m# set floating (nontiling) for special apps[0m
+[38;5;238m 460[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Xsane" instance="xsane"] floating enable[0m
+[38;5;238m 461[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Pavucontrol" instance="pavucontrol"] floating enable[0m
+[38;5;238m 462[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="qt5ct" instance="qt5ct"] floating enable[0m
+[38;5;238m 463[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Blueberry.py" instance="blueberry.py"] floating enable[0m
+[38;5;238m 464[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable[0m
+[38;5;238m 465[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="Pamac-manager"] floating enable[0m
+[38;5;238m 466[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [window_role="About"] floating enable[0m
+[38;5;238m 467[0m   [38;5;238m│[0m 
+[38;5;238m 468[0m   [38;5;238m│[0m [38;2;248;248;242m# set border of floating window[0m
+[38;5;238m 469[0m   [38;5;238m│[0m [38;2;248;248;242mfor_window [class="urxvt"] border pixel 1[0m
+[38;5;238m 470[0m   [38;5;238m│[0m 
+[38;5;238m 471[0m   [38;5;238m│[0m [38;2;248;248;242m# set size of floating window[0m
+[38;5;238m 472[0m   [38;5;238m│[0m [38;2;248;248;242m#for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog[0m
+[38;5;238m 473[0m   [38;5;238m│[0m [38;2;248;248;242m#for_window [class=".*"] resize set 640 480 #to change size of all floating windows [0m
+[38;5;238m 474[0m   [38;5;238m│[0m 
+[38;5;238m 475[0m   [38;5;238m│[0m [38;2;248;248;242m# set position of floating window[0m
+[38;5;238m 476[0m   [38;5;238m│[0m [38;2;248;248;242m#for_window [class=".*"] move position center[0m
+[38;5;238m 477[0m   [38;5;238m│[0m 
+[38;5;238m 478[0m   [38;5;238m│[0m [38;2;248;248;242m######################################[0m
+[38;5;238m 479[0m   [38;5;238m│[0m [38;2;248;248;242m# color settings for bar and windows #[0m
+[38;5;238m 480[0m   [38;5;238m│[0m [38;2;248;248;242m######################################[0m
+[38;5;238m 481[0m   [38;5;238m│[0m 
+[38;5;238m 482[0m   [38;5;238m│[0m [38;2;248;248;242m# Define colors variables:[0m
+[38;5;238m 483[0m   [38;5;238m│[0m [38;2;248;248;242mset $darkbluetrans  #08052be6[0m
+[38;5;238m 484[0m   [38;5;238m│[0m [38;2;248;248;242mset $darkblue       #08052b[0m
+[38;5;238m 485[0m   [38;5;238m│[0m [38;2;248;248;242mset $lightblue      #5294e2[0m
+[38;5;238m 486[0m   [38;5;238m│[0m [38;2;248;248;242mset $urgentred      #e53935[0m
+[38;5;238m 487[0m   [38;5;238m│[0m [38;2;248;248;242mset $white      #ffffff[0m
+[38;5;238m 488[0m   [38;5;238m│[0m [38;2;248;248;242mset $black      #000000[0m
+[38;5;238m 489[0m   [38;5;238m│[0m [38;2;248;248;242mset $purple     #e345ff[0m
+[38;5;238m 490[0m   [38;5;238m│[0m [38;2;248;248;242mset $darkgrey       #383c4a[0m
+[38;5;238m 491[0m   [38;5;238m│[0m [38;2;248;248;242mset $grey       #b0b5bd[0m
+[38;5;238m 492[0m   [38;5;238m│[0m [38;2;248;248;242mset $mediumgrey     #8b8b8b[0m
+[38;5;238m 493[0m   [38;5;238m│[0m [38;2;248;248;242mset $yellowbrown    #e1b700[0m
+[38;5;238m 494[0m   [38;5;238m│[0m 
+[38;5;238m 495[0m   [38;5;238m│[0m [38;2;248;248;242m# define colors for windows:[0m
+[38;5;238m 496[0m   [38;5;238m│[0m [38;2;248;248;242m#class                  border      bground     text        indicator   child_border[0m
+[38;5;238m 497[0m   [38;5;238m│[0m [38;2;248;248;242mclient.focused              $lightblue  $darkblue   $white      $mediumgrey $mediumgrey[0m
+[38;5;238m 498[0m   [38;5;238m│[0m [38;2;248;248;242mclient.unfocused            $darkblue   $darkblue   $grey       $darkgrey   $darkgrey[0m
+[38;5;238m 499[0m   [38;5;238m│[0m [38;2;248;248;242mclient.focused_inactive     $darkblue   $darkblue   $grey       $black      $black[0m
+[38;5;238m 500[0m   [38;5;238m│[0m [38;2;248;248;242mclient.urgent               $urgentred  $urgentred  $white      $yellowbrown    $yellowbrown[0m
+[38;5;238m 501[0m   [38;5;238m│[0m 
+[38;5;238m 502[0m   [38;5;238m│[0m [38;2;248;248;242m############################################[0m
+[38;5;238m 503[0m   [38;5;238m│[0m [38;2;248;248;242m# bar settings (input comes from i3blocks) #[0m
+[38;5;238m 504[0m   [38;5;238m│[0m [38;2;248;248;242m############################################[0m
+[38;5;238m 505[0m   [38;5;238m│[0m 
+[38;5;238m 506[0m   [38;5;238m│[0m [38;2;248;248;242m# Start i3bar to display a workspace bar[0m
+[38;5;238m 507[0m   [38;5;238m│[0m [38;2;248;248;242m# (plus the system information i3status finds out, if available)[0m
+[38;5;238m 508[0m   [38;5;238m│[0m [38;2;248;248;242mbar {[0m
+[38;5;238m 509[0m   [38;5;238m│[0m [38;2;248;248;242m        font pango: Noto Sans Regular 10[0m
+[38;5;238m 510[0m   [38;5;238m│[0m [38;2;248;248;242m        status_command i3blocks -c ~/.config/i3/i3blocks.conf[0m
+[38;5;238m 511[0m   [38;5;238m│[0m [38;2;248;248;242m            position bottom[0m
+[38;5;238m 512[0m   [38;5;238m│[0m [38;2;248;248;242m#           i3bar_command i3bar --transparency[0m
+[38;5;238m 513[0m   [38;5;238m│[0m [38;2;248;248;242m# it could be that you have no primary display set: set one (xrandr --output <output> --primary)[0m
+[38;5;238m 514[0m   [38;5;238m│[0m [38;2;248;248;242m# reference: https://i3wm.org/docs/userguide.html#_tray_output[0m
+[38;5;238m 515[0m   [38;5;238m│[0m [38;2;248;248;242m            #tray_output primary[0m
+[38;5;238m 516[0m   [38;5;238m│[0m [38;2;248;248;242m            tray_padding 0[0m
+[38;5;238m 517[0m   [38;5;238m│[0m 
+[38;5;238m 518[0m   [38;5;238m│[0m [38;2;248;248;242m# When strip_workspace_numbers is set to yes,[0m
+[38;5;238m 519[0m   [38;5;238m│[0m [38;2;248;248;242m# any workspace that has a name of the form[0m
+[38;5;238m 520[0m   [38;5;238m│[0m [38;2;248;248;242m# “[n][:][NAME]” will display only the name.[0m
+[38;5;238m 521[0m   [38;5;238m│[0m [38;2;248;248;242mstrip_workspace_numbers yes[0m
+[38;5;238m 522[0m   [38;5;238m│[0m [38;2;248;248;242m##strip_workspace_name no[0m
+[38;5;238m 523[0m   [38;5;238m│[0m 
+[38;5;238m 524[0m   [38;5;238m│[0m [38;2;248;248;242m            colors {[0m
+[38;5;238m 525[0m   [38;5;238m│[0m [38;2;248;248;242m            separator          $purple[0m
+[38;5;238m 526[0m   [38;5;238m│[0m [38;2;248;248;242m            background         $darkgrey[0m
+[38;5;238m 527[0m   [38;5;238m│[0m [38;2;248;248;242m            statusline         $white[0m
+[38;5;238m 528[0m   [38;5;238m│[0m [38;2;248;248;242m#                               border              bg      txt     indicator[0m
+[38;5;238m 529[0m   [38;5;238m│[0m [38;2;248;248;242m        focused_workspace   $mediumgrey     $grey       $darkgrey   $purple[0m
+[38;5;238m 530[0m   [38;5;238m│[0m [38;2;248;248;242m        active_workspace    $lightblue          $mediumgrey $darkgrey   $purple[0m
+[38;5;238m 531[0m   [38;5;238m│[0m [38;2;248;248;242m        inactive_workspace  $darkgrey           $darkgrey   $grey       $purple[0m
+[38;5;238m 532[0m   [38;5;238m│[0m [38;2;248;248;242m        urgent_workspace    $urgentred          $urgentred  $white      $purple[0m
+[38;5;238m 533[0m   [38;5;238m│[0m [38;2;248;248;242m    }[0m
+[38;5;238m 534[0m   [38;5;238m│[0m [38;2;248;248;242m}[0m
+[38;5;238m 535[0m   [38;5;238m│[0m 
+[38;5;238m 536[0m   [38;5;238m│[0m [38;2;248;248;242m# you can add different bars for multidisplay setups on each display:[0m
+[38;5;238m 537[0m   [38;5;238m│[0m [38;2;248;248;242m# set output HDMI-0 to the display you want the bar, --transparency can be set.[0m
+[38;5;238m 538[0m   [38;5;238m│[0m [38;2;248;248;242m# Transparency needs rgba color codes to be used where the last two letters are the transparency factor see here:[0m
+[38;5;238m 539[0m   [38;5;238m│[0m [38;2;248;248;242m# https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4[0m
+[38;5;238m 540[0m   [38;5;238m│[0m [38;2;248;248;242m# #08052be6 --> e6=90%[0m
+[38;5;238m 541[0m   [38;5;238m│[0m 
+[38;5;238m 542[0m   [38;5;238m│[0m [38;2;248;248;242m# bar {[0m
+[38;5;238m 543[0m   [38;5;238m│[0m [38;2;248;248;242m#   font pango: Noto Sans Regular 10[0m
+[38;5;238m 544[0m   [38;5;238m│[0m [38;2;248;248;242m#   status_command i3blocks -c ~/.config/i3/i3blocks-2.conf[0m
+[38;5;238m 545[0m   [38;5;238m│[0m [38;2;248;248;242m#   i3bar_command i3bar --transparency[0m
+[38;5;238m 546[0m   [38;5;238m│[0m [38;2;248;248;242m#   output HDMI-0[0m
+[38;5;238m 547[0m   [38;5;238m│[0m [38;2;248;248;242m#   position bottom[0m
+[38;5;238m 548[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 549[0m   [38;5;238m│[0m [38;2;248;248;242m# When strip_workspace_numbers is set to yes,[0m
+[38;5;238m 550[0m   [38;5;238m│[0m [38;2;248;248;242m# any workspace that has a name of the form[0m
+[38;5;238m 551[0m   [38;5;238m│[0m [38;2;248;248;242m# “[n][:][NAME]” will display only the name.[0m
+[38;5;238m 552[0m   [38;5;238m│[0m [38;2;248;248;242m#strip_workspace_numbers yes[0m
+[38;5;238m 553[0m   [38;5;238m│[0m [38;2;248;248;242m##strip_workspace_name no[0m
+[38;5;238m 554[0m   [38;5;238m│[0m [38;2;248;248;242m#[0m
+[38;5;238m 555[0m   [38;5;238m│[0m [38;2;248;248;242m#   colors {[0m
+[38;5;238m 556[0m   [38;5;238m│[0m [38;2;248;248;242m#       separator          $purple[0m
+[38;5;238m 557[0m   [38;5;238m│[0m [38;2;248;248;242m#       background         $darkbluetrans[0m
+[38;5;238m 558[0m   [38;5;238m│[0m [38;2;248;248;242m#           statusline         $white[0m
+[38;5;238m 559[0m   [38;5;238m│[0m [38;2;248;248;242m#                   border      bg      txt     indicator[0m
+[38;5;238m 560[0m   [38;5;238m│[0m [38;2;248;248;242m#       focused_workspace   $lighterblue    $lighterblue    $darkblue   $purple[0m
+[38;5;238m 561[0m   [38;5;238m│[0m [38;2;248;248;242m#       active_workspace    $lightdblue $lightdblue $darkblue   $purple[0m
+[38;5;238m 562[0m   [38;5;238m│[0m [38;2;248;248;242m#       inactive_workspace  $darkblue   $darkblue   $lightdblue $purple[0m
+[38;5;238m 563[0m   [38;5;238m│[0m [38;2;248;248;242m#       urgent_workspace    $urgentred  $urgentred  $white      $purple[0m
+[38;5;238m 564[0m   [38;5;238m│[0m [38;2;248;248;242m#   }[0m
+[38;5;238m 565[0m   [38;5;238m│[0m [38;2;248;248;242m#}[0m
+[38;5;238m 566[0m   [38;5;238m│[0m 
+[38;5;238m 567[0m   [38;5;238m│[0m [38;2;248;248;242m#####################################[0m
+[38;5;238m 568[0m   [38;5;238m│[0m [38;2;248;248;242m# Application menu handled by rofi: #[0m
+[38;5;238m 569[0m   [38;5;238m│[0m [38;2;248;248;242m#####################################[0m
+[38;5;238m 570[0m   [38;5;238m│[0m 
+[38;5;238m 571[0m   [38;5;238m│[0m [38;2;248;248;242m## rofi bindings fancy application menu ($mod+d /F9 optional disabled)[0m
+[38;5;238m 572[0m   [38;5;238m│[0m 
+[38;5;238m 573[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+d exec rofi -modi drun -show drun \[0m
+[38;5;238m 574[0m   [38;5;238m│[0m [38;2;248;248;242m        -config ~/.config/rofi/rofidmenu.rasi[0m
+[38;5;238m 575[0m   [38;5;238m│[0m 
+[38;5;238m 576[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym F9 exec rofi -modi drun -show drun \[0m
+[38;5;238m 577[0m   [38;5;238m│[0m [38;2;248;248;242m#       -config ~/.config/rofi/rofidmenu.rasi[0m
+[38;5;238m 578[0m   [38;5;238m│[0m 
+[38;5;238m 579[0m   [38;5;238m│[0m [38;2;248;248;242m## rofi bindings for window menu ($mod+t /F10 optional disabled)[0m
+[38;5;238m 580[0m   [38;5;238m│[0m 
+[38;5;238m 581[0m   [38;5;238m│[0m [38;2;248;248;242mbindsym $mod+t exec rofi -show window \[0m
+[38;5;238m 582[0m   [38;5;238m│[0m [38;2;248;248;242m        -config ~/.config/rofi/rofidmenu.rasi[0m
+[38;5;238m 583[0m   [38;5;238m│[0m 
+[38;5;238m 584[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym F10 exec rofi -show window \[0m
+[38;5;238m 585[0m   [38;5;238m│[0m [38;2;248;248;242m#       -config ~/.config/rofi/rofidmenu.rasi[0m
+[38;5;238m 586[0m   [38;5;238m│[0m 
+[38;5;238m 587[0m   [38;5;238m│[0m [38;2;248;248;242m## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)[0m
+[38;5;238m 588[0m   [38;5;238m│[0m 
+[38;5;238m 589[0m   [38;5;238m│[0m [38;2;248;248;242m#exec --no-startup-id greenclip daemon>/dev/null[0m
+[38;5;238m 590[0m   [38;5;238m│[0m [38;2;248;248;242m#bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \[0m
+[38;5;238m 591[0m   [38;5;238m│[0m [38;2;248;248;242m#       -config ~/.config/rofi/rofidmenu.rasi[0m
+[38;5;238m 592[0m   [38;5;238m│[0m 
+[38;5;238m 593[0m   [38;5;238m│[0m 
+[38;5;238m───────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
